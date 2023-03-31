@@ -21,7 +21,7 @@ export const Level6 = () => {
       <Box
         padding={3}
         sx={{
-          position: "relative",
+          // position: "relative",
           backgroundColor: theme.palette.primary.main,
           width: "100%",
           height: 600,
@@ -63,16 +63,22 @@ export const Level6 = () => {
               pl: 4,
               fontWeight: "bold",
               fontSize: "15px",
+              
             }}
+            pt ="10"
           >
             Meet up With Other Techstarts And grow Together
           </Typography>
         </Stack>
-
+<Box sx={{
+  position: "relative",
+  width: "100%",
+  height: 300,
+}}>
         <Box
           sx={{
             position: "absolute",
-            top: "50%",
+            top: "20%",
             left: "60%",
           }}
         >
@@ -202,7 +208,7 @@ export const Level6 = () => {
         <Box
           sx={{
             position: "absolute",
-            bottom: "10%",
+            bottom: "5%",
             left: isNonMobileScreen ? "45%" : "25%",
           }}
         >
@@ -227,7 +233,7 @@ export const Level6 = () => {
       </Button>
       </Box>
       </Box>
-      
+      </Box>
     </Stack>
   );
 };

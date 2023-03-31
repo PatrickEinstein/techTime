@@ -1,13 +1,14 @@
 import { Box, Button, IconButton, Stack, Typography } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import { useTheme } from "@mui/material/styles";
-import {useMediaQuery }from "@mui/material";
+import { useMediaQuery } from "@mui/material";
 import { MenuBookOutlined, MenuOutlined } from "@mui/icons-material";
-
+import { NavbarPc } from "./navbarpc";
 
 export const Navbar = () => {
+  const [openNavbar, setOpenNavbar] = useState(0);
 
-    const isNonMobileScreen = useMediaQuery("(min-width:600px)")
+  const isNonMobileScreen = useMediaQuery("(min-width:900px)");
   const theme = useTheme();
   return (
     <Stack
@@ -17,8 +18,10 @@ export const Navbar = () => {
       padding={3}
       paddingRight={5}
       paddingLeft={5}
-      sx={{ backgroundColor: theme.palette.secondary.light }}
-    >
+     sx={{
+      backgroundColor: theme.palette.secondary.light 
+  
+     }}    >
       <box>
         <Typography
           variant="h5"
@@ -34,62 +37,33 @@ export const Navbar = () => {
       </box>
 
       <Box>
-        {
-            isNonMobileScreen ? 
-        
-        <Stack direction={"row"} spacing={3}>
-          <Typography
-            color={theme.palette.secondary.contrastText}
-            sx={{
-              fontWeight: "bold",
-              fontSize: "8px",
-            }}
-          >
-            Home
-          </Typography>
-          <Typography
-            color={theme.palette.secondary.contrastText}
-            sx={{
-              fontSize: "8px",
-            }}
-          >
-            About Us
-          </Typography>
-          <Typography color={theme.palette.secondary.contrastText}  sx={{
-              fontSize: "8px",
-            }}>
-            Message
-          </Typography>
-          <Typography color={theme.palette.secondary.contrastText}  sx={{
-              fontSize: "8px",
-            }}>
-            Community
-          </Typography>
-          <Button
-            variant="contained"
-            color="info"
-            style={{
-              backgroundColor: "white",
-            }}
-            size="small"
-          >
-            <Typography
-              variant="subtitle2"
-              color={theme.palette.primary.main}
-              sx={{
-                fontSize: "8px",
-              }}
-            >
-              Enroll now
-            </Typography>
-          </Button>
-        </Stack>
-:
-<IconButton>
-    <MenuOutlined/>
-</IconButton>
-            }
+        {isNonMobileScreen ? (
+          <NavbarPc />
+        ) : (
+          <IconButton onClick={() => setOpenNavbar((prev) => !prev)}>
+            <MenuOutlined />
+          </IconButton>
+        )}
       </Box>
+
+      {
+        openNavbar ?
+        <Box
+        sx={{
+          position : "absolute",
+          top : 100,
+          right : 20,
+         
+        }}
+        backgroundColor={theme.palette.secondary.light }
+        >
+          <NavbarPc/>
+        </Box>
+
+        :
+
+        ""
+      }
     </Stack>
   );
 };

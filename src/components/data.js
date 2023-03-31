@@ -10,8 +10,7 @@ export const Features = [
         >
             High Definition video is Video of Higher Resolution
             And Quality Than Standard Definition. While There
-            is No Standard Meaning For High Definition,
-            Generally Any Standard Video Image
+            
         </Typography>
     },
     {
@@ -21,8 +20,7 @@ export const Features = [
         >
             High Definition video is Video of Higher Resolution
             And Quality Than Standard Definition. While There
-            is No Standard Meaning For High Definition,
-            Generally Any Standard Video Image
+            
         </Typography>
     },
     {
@@ -32,8 +30,7 @@ export const Features = [
         >
             High Definition video is Video of Higher Resolution
             And Quality Than Standard Definition. While There
-            is No Standard Meaning For High Definition,
-            Generally Any Standard Video Image
+            
         </Typography>
     },
     {
@@ -43,8 +40,7 @@ export const Features = [
         >
             High Definition video is Video of Higher Resolution
             And Quality Than Standard Definition. While There
-            is No Standard Meaning For High Definition,
-            Generally Any Standard Video Image
+            
         </Typography>
     }
 ]

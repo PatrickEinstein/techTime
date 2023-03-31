@@ -28,8 +28,8 @@ export const Level4 = () => {
   const isNonMobileScreen = useMediaQuery("(min-width:600px)")
 
   return (
-    <Stack justifyContent="center" alignItems="center" spacing={2}>
-      <Stack justifyContent="center" alignItems="center" spacing={2}>
+    <Stack justifyContent="center" alignItem="center" spacing={2}>
+      <Stack justifyContent="space-around" alignItem="center" spacing={2}>
         <Typography
           variant="h5"
           align="center"
@@ -44,9 +44,13 @@ export const Level4 = () => {
 
         <Stack
           direction={"row"}
-          justifyContent="center"
-          alignItems="center"
-          spacing={2}
+          justifyContent="space-around"
+          alignItem="space-around"
+          spacing={1}
+          sx={{
+            justifyContent:"space-around",
+            alignItems:"space-around"
+          }}
         >
           <Button variant="outlined" color="info" 
         style={{
@@ -135,7 +139,7 @@ export const Level4 = () => {
                   <Item
                     theme={theme}
                     sx={{
-                      height: isNonMobileScreen ? "auto" : " 400px",
+                      height: isNonMobileScreen ? "auto" : " auto",
                       padding:"0px"
                     }}
                   >

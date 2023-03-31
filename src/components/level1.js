@@ -12,26 +12,25 @@ import Avatar from "@mui/material/Avatar";
 import AvatarGroup from "@mui/material/AvatarGroup";
 import { faker } from "@faker-js/faker";
 import {
-  ArrowArcRight,
-  ArrowRight,
+
   GoogleLogo,
   SlackLogo,
   StripeLogo,
 } from "phosphor-react";
-import { fontSize } from "@mui/system";
-import { ArrowRightSharp } from "@mui/icons-material";
+
 import {useMediaQuery }from "@mui/material";
 
 export const Level1 = () => {
   const theme = useTheme();
-const isNonMobileScreen = useMediaQuery("(min-width:600px)")
+const isNonMobileScreen = useMediaQuery("(min-width:900px)")
   return (
     <Stack >
       <Stack
         sx={{ backgroundColor: theme.palette.secondary.light}}
         spacing={2}
-        direction={isNonMobileScreen ? "row" : "column"}
+        direction={ isNonMobileScreen ? "row" : "column"}
       >
+        <Box>
         <Stack spacing={5}>
         <Stack justifyContent="center" alignItems="center" spacing={2}>
           <Typography
@@ -128,6 +127,7 @@ const isNonMobileScreen = useMediaQuery("(min-width:600px)")
           </Stack>
         </Stack>
         </Stack>
+        </Box>
         
         {/* iMAGE  start*/}
         
